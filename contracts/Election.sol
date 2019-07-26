@@ -8,6 +8,7 @@ contract Election {
         uint voteCount;
     }
 
+    string public test = "hello";
     // Store accounts that have voted
     mapping(address => bool) public voters;
     // Store Candidates
