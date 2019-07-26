@@ -1,4 +1,4 @@
-pragma solidity 0.4.20;
+pragma solidity ^0.4.20;
 
 contract Election {
     // Model a Candidate
@@ -20,7 +20,9 @@ contract Election {
     event votedEvent (
         uint indexed _candidateId
     );
-
+    function getCandidatesCount () public returns (uint) {
+        return candidatesCount;
+    }
     function Election () public {
         addCandidate("Candidate 1");
         addCandidate("Candidate 2");
